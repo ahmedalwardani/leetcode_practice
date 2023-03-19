@@ -9,5 +9,5 @@ const checkIfPangram = (sentence) => {
       containsLetter[letter] = true;
     }
   }
-  return Object.keys(containsLetter).length === 26 ? true : false;
+  return Object.keys(containsLetter).length === 26;
 };
