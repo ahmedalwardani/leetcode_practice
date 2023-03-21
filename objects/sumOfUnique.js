@@ -6,7 +6,6 @@ const sumOfUnique = (nums) => {
   const arrayOfUniques = nums.filter(
     (num) => nums.filter((n) => n === num).length === 1
   );
-  console.log(arrayOfUniques);
   return arrayOfUniques.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     0
