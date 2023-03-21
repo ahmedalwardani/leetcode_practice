@@ -6,7 +6,10 @@ const sumOfUnique = (nums) => {
   const arrayOfUniques = nums.filter(
     (num) => nums.filter((n) => n === num).length === 1
   );
-  return arrayOfUniques.reduce((acc, curr) => acc + curr, 0);
+  console.log(arrayOfUniques);
+  return arrayOfUniques.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
 };
 
-console.log(sumOfUnique());
