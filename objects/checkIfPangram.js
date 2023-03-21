@@ -11,3 +11,7 @@ const checkIfPangram = (sentence) => {
   }
   return Object.keys(containsLetter).length === 26;
 };
+
+const checkIfPangramWithSet = (sentence) => {
+  return new Set(sentence.split("")).size === 26;
+};
