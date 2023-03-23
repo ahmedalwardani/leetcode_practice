@@ -11,11 +11,3 @@ const destCity = (paths) => {
     }
   }
 };
-
-console.log(
-  destCity([
-    ["London", "New York"],
-    ["New York", "Lima"],
-    ["Lima", "Sao Paulo"],
-  ])
-);
