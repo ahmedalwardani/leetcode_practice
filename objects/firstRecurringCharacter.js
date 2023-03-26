@@ -12,9 +12,8 @@ const firstRecurringCharacter = (input) => {
   for (const item of input) {
     if (map[item]) {
       return item;
-    } else {
-      map[item] = true;
     }
+    map[item] = true;
   }
   return undefined;
 };
