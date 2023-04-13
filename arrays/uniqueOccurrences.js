@@ -3,11 +3,9 @@
 const uniqueOccurrences = (arr) => {
   let occurrencesObject = {};
   for (const number of arr) {
-    if (occurrencesObject[number]) {
-      occurrencesObject[number] += 1;
-    } else {
-      occurrencesObject[number] = 1;
-    }
+    occurrencesObject[number]
+      ? (occurrencesObject[number] += 1)
+      : (occurrencesObject[number] = 1);
   }
   return (
     new Set(Object.values(occurrencesObject)).size ===
