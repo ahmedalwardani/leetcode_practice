@@ -14,6 +14,7 @@
 const isCircularSentence = (sentence) => {
   let sentenceArray = sentence.split(" ");
   const lastWord = sentenceArray[sentenceArray.length - 1];
+  if (lastWord[lastWord.length - 1] !== sentenceArray[0][0]) return false;
   for (let i = 0; i < sentenceArray.length - 1; i++) {
     if (
       sentenceArray[i][sentenceArray[i].length - 1] !== sentenceArray[i + 1][0]
@@ -21,5 +22,5 @@ const isCircularSentence = (sentence) => {
       return false;
     }
   }
-  return lastWord[lastWord.length - 1] === sentenceArray[0][0];
+  return true;
 };
