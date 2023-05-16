@@ -6,4 +6,3 @@ const findNumbers = (nums) => {
     .length;
 };
 
-console.log(findNumbers([12, 345, 2, 6, 7896]));
