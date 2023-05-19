@@ -4,15 +4,12 @@
 
 // Return the number of vowel strings words[i] where i belongs to the inclusive range [left, right].
 
-const vowels = ["a", "e", "i", "o", "u"];
 
 const vowelStrings = (words, left, right) => {
+  const vowelRegex = /[aeiou]/;
   let vowelStringsCounter = 0;
   for (let i = left; i <= right; i++) {
-    if (
-      vowels.includes(words[i][0]) &&
-      vowels.includes(words[i][words[i].length - 1])
-    ) {
+    if (words[i][0].match(vowelRegex) && words[i].at(-1).match(vowelRegex)) {
       vowelStringsCounter += 1;
     }
   }
