@@ -7,10 +7,10 @@
 const targetIndices = (nums, target) => {
   let targetIndices = [];
   const sortedNums = nums.sort((a, b) => a - b);
-  sortedNums.forEach((sortedNum, index) => {
-    if (sortedNums[index] === target) {
-      targetIndices.push(index);
+  for (let i = 0; i < sortedNums.length; i++) {
+    if (sortedNums[i] === target) {
+      targetIndices.push(i);
     }
-  });
+  }
   return targetIndices;
 };
